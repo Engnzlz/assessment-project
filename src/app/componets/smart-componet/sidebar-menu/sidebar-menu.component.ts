@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class SidebarMenuComponent {
     @Output() showGeography = new EventEmitter<boolean>();
+    @Output() showHolidays = new EventEmitter<boolean>();
 
     showDropdown: string | null = null;
     knowledgeCheckDropdownVisible: boolean = false;
@@ -28,5 +29,9 @@ export class SidebarMenuComponent {
 
     showGeographyCard() {
       this.showGeography.emit(true);
+    }
+
+    showHolidaysCard() {
+      this.showHolidays.emit(true);
     }
 }
