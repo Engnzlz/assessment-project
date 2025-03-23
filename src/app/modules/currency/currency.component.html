@@ -1,1 +1,16 @@
-<p>currency works!</p>
+    <div class="currency-container">
+        <div class="coins-section">
+        <button *ngFor="let coin of coins" class="coin-item">
+            <img [src]="coin.imageUrl" alt="{{ coin.name }}">
+        </button>
+        </div>
+        <div class="bills-section">
+        <div *ngFor="let bill of bills" class="bill-row">
+            <div class="bill-info">
+            <img [src]="bill.imageUrl" alt="{{ bill.name }}">
+            <p>{{ bill.value }}</p>
+            </div>
+            <button class="bill-button">Botón billetes</button>
+        </div>
+        </div>
+    </div>
