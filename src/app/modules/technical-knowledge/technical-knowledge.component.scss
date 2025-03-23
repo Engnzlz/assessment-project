@@ -1,0 +1,72 @@
+.technical-knowledge-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.technical-knowledge-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.technical-knowledge-image {
+    position: relative;
+    width: 250px;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.image-accent {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #E1B645;
+}
+
+.technical-knowledge-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.technical-knowledge-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.technical-knowledge-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.technical-knowledge-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        margin-bottom: 5px;
+    }
+}
+
+.technical-knowledge-button {
+    background-color: #DF5B17;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+}

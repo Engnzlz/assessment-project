@@ -1,19 +1,42 @@
+/* src/styles.scss */
+
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Noto Sans, sans-serif;
+    font-family: 'Noto Sans', sans-serif; /* Usando la fuente Noto Sans */
 }
 
-// Set default font and background color for the body
+/* Body Styles */
 body {
-    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    height: 100%; 
+    margin: 0;
 }
 
-// Define some common utility classes
+/* Color Variables */
+$color-primario: #21305B;
+$color-secundario: #DF5B17;
+$color-terciario: #E1B645;
+$color-terciario-oscuro: #E3A134;
+
+$color-texto-principal: #000000;
+$color-texto-secundario: #333333;
+$color-texto-gris: #55565B;
+$color-texto-claro: #F9F7F1;
+$color-texto-blanco: #FFFFFF;
+
+$color-fondo-claro: #F5F5F5;
+$color-fondo-gradacion: #C7EBDB;
+$color-fondo-flipcard: #EFC4CC;
+
+$color-respuesta-positivo: #17C964;
+$color-respuesta-negativo: #F93543;
+
+/* Utility Classes */
 .container {
     width: 80%;
     margin: 0 auto;
@@ -24,73 +47,45 @@ body {
     text-align: center;
 }
 
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+
+/* Title Styles */
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $color-texto-principal;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $color-terciario-oscuro;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: normal;
+    color: $color-texto-gris;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+/* Material Icons */
 .material-icons {
     font-size: 24px;
     color: #808080;
 }
 
-// Colores de la paleta
-$color-negro: #000000;
-$color-gris-oscuro: #333333;
-$color-gris-medio: #55565B;
-$color-color-hueso: #F9F7F1;
-$color-morado-base: #DF5B17;
-$color-amarillo: #E1B645;
-$color-amarillo-oscuro: #E3A134;
-
-$color-background-azul: #21305B;
-
-$color-negro-1: #1D1D1B;
-$color-gris-claro: #F5F5F5;
-$color-blanco: #FFFFFF;
-
-$color-gradacion-flip-card: #C7EBDB;
-$color-back-flip-card: #EFC4CC;
-$color-verde-respuesta: #17C964;
-$color-rojo-intento: #F93543;
-
-.mt-1 {
-    margin-top: 10px;
+/* Estilos adicionales del body */
+html, body {
+    height: 100%;
 }
-
-.mt-2 {
-    margin-top: 20px;
-}
-
-.mt-3 {
-    margin-top: 30px;
-}
-
-.mb-1 {
-    margin-bottom: 10px;
-}
-
-.mb-2 {
-    margin-bottom: 20px;
-}
-.mb-3 {
-    margin-bottom: 30px;
-}
-// General styles for titles, subtitles, and h3
-.title {
-    font-size: 2em;
-    font-weight: bold;
-    color: $color-negro;
-    margin-bottom: 0.5em;
-}
-
-.subtitle {
-    font-size: 1.5em;
-    font-weight: semi-bold;
-    color: $color-amarillo-oscuro;
-    margin-bottom: 0.75em;
-}
-
-h3 {
-    font-size: 1.25em;
-    font-weight: normal;
-    color: $color-gris-medio;
-    margin-bottom: 1em;
-}
-html, body { height: 100%; }
-body { margin: 0; font-family: sans-serif; }

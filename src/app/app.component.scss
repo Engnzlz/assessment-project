@@ -5,7 +5,10 @@
 
 app-side-bar-menu {
     width: 200px; /* Ajusta el ancho del sidebar-menu según tus necesidades */
-    background-color: #f0f0f0; /* Agrega un color de fondo para distinguirlo */
+    background-color: #f0f0f0;
+    padding: 20px;
+    color: white;
+    font-family: sans-serif;
 }
 
 .content {
@@ -14,4 +17,5 @@ app-side-bar-menu {
     display: flex; /* Usamos flexbox para centrar el contenido */
     justify-content: center; /* Centramos horizontalmente */
     align-items: center; /* Centramos verticalmente */
+    overflow-y: auto;
 }

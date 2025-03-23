@@ -1,4 +1,16 @@
-<div class="kpi-container">
-    <h1>Indicadores Clave de Rendimiento (KPI)</h1>
-    <p>Aquí encontrarás información sobre los KPI.</p>
-</div>
+    <div class="kpi-container">
+        <h2>Indicadores Clave de Rendimiento (KPI)</h2>
+        <div class="kpi-cards">
+        <div *ngFor="let kpi of kpis" class="kpi-card">
+            <div class="kpi-header">
+            <h3>{{ kpi.title }}</h3>
+            <div class="kpi-period">{{ kpi.period }}</div>
+            </div>
+            <div class="kpi-value">{{ kpi.value }}</div>
+            <div class="kpi-trend" [ngClass]="kpi.trendClass">
+            {{ kpi.trend }}
+            </div>
+            <p class="kpi-description">{{kpi.description}}</p>
+        </div>
+        </div>
+    </div>

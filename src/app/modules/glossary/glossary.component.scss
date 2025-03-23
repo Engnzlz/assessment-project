@@ -1,0 +1,65 @@
+    .glossary-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+        font-family: Arial, sans-serif;
+        align-items: center;
+            }
+            .scenario {
+                display: flex;
+                background-color: #f9f9f9;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                justify-content: center;
+                align-items: stretch;
+            }
+    
+    .image-container {
+        overflow: hidden;
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .scenario-content {
+        flex: 1;
+        padding: 1.5rem;
+        flex-direction: column;
+    }
+    
+    .scenario-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+    
+    .scenario-number {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #DF5B17
+    }
+    
+    .terms {
+        font-size: 1rem;
+        color: #666;
+    }
+    
+    .conversation {
+        p {
+        margin-bottom: 1rem;
+        }
+    
+        .customer {
+        font-weight: bold;
+        color: #007bff;
+        }
+    
+        .representative {
+        font-weight: bold;
+        color: #28a745;
+        }
+    }
