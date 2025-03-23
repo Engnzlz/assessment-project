@@ -35,10 +35,10 @@
                 <div class="menu-item" (click)="selectComponent('cuisine'); $event.stopPropagation()">
                     <span class="material-icons">restaurant</span> Cuisine
                 </div>
-                <div class="menu-item" (click)="selectComponent('language')">
+                <div class="menu-item" (click)="selectComponent('language'); $event.stopPropagation()">
                     <span class="material-icons">translate</span> Language
                 </div>
-                <div class="menu-item" (click)="selectComponent('currency')">
+                <div class="menu-item" (click)="selectComponent('currency'); $event.stopPropagation()">
                     <span class="material-icons">attach_money</span> Currency
                 </div>
             </div>
