@@ -1,11 +1,8 @@
 <div class="app-container">
-  <app-sidebar-menu 
-  
-  (showGeography)="showGeography = $event"
-  (showHolidays) = "showHolidays = $event">
-  
-  </app-sidebar-menu>
-<div class="content">
-<app-geography-card *ngIf="showGeography"></app-geography-card>
-<app-holidays *ngIf="showHolidays"></app-holidays>
+    <app-sidebar-menu (componentSelected)="handleComponentSelection($event)"></app-sidebar-menu>
+    <div class="content">
+        <app-geography-card *ngIf="selectedComponent === 'geography'"></app-geography-card>
+        <app-holidays *ngIf="selectedComponent === 'holidays'"></app-holidays>
+        <app-sports *ngIf="selectedComponent === 'sports'"></app-sports>
+    </div>
 </div>

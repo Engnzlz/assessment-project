@@ -5,84 +5,85 @@
     <div class="user-profile">
         <div class="avatar-container">
             <img src="assets/images/avatar00.png" alt="Avatar">
-        <div class="expert-label">Errorless Expert</div>
-        <div class="plus-buttons">
-            <button>+</button>
-            <button>+</button>
-            <button>+</button>
-            <button>+</button>
-            <button>+</button>
-        </div>
+            <div class="expert-label">Errorless Expert</div>
+            <div class="plus-buttons">
+                <button>+</button>
+                <button>+</button>
+                <button>+</button>
+                <button>+</button>
+                <button>+</button>
+                <button>+</button>
+            </div>
             <div class="award-text">
-            Finish 5 activities without any error to earn this award.
+                Finish 5 activities without any error to earn this award.
             </div>
         </div>
     </div>
-        <div class="menu-items">
-            <div class="menu-item" (click)="toggleDropdown('culture')">
-                Culture specifics <span class="arrow">></span>
-                <div class="dropdown" *ngIf="showDropdown === 'culture'">
-                    <div class="menu-item" (click)="showGeographyCard(); $event.stopPropagation()">
-                        <span class="material-icons">public</span> Geography
-                    </div>
-                    <div class="menu-item" (click)="showHolidaysCard(); $event.stopPropagation()">
-                        <span class="material-icons">event</span> Holidays
-                    </div>
-                    <div class="dropdown-item">
-                        <span class="material-icons">emoji_events</span> Sports
-                    </div>
-                    <div class="dropdown-item">
-                        <span class="material-icons">restaurant</span> Cuisine
-                    </div>
-                    <div class="dropdown-item">
-                        <span class="material-icons">translate</span> Language
-                    </div>
-                    <div class="dropdown-item">
-                        <span class="material-icons">attach_money</span> Currency
-                    </div>
-                    </div>
+    <div class="menu-items">
+        <div class="menu-item" (click)="toggleDropdown('culture')">
+            Culture specifics <span class="arrow">></span>
+            <div class="dropdown" *ngIf="showDropdown === 'culture'">
+                <div class="menu-item" (click)="selectComponent('geography'); $event.stopPropagation()">
+                    <span class="material-icons">public</span> Geography
+                </div>
+                <div class="menu-item" (click)="selectComponent('holidays'); $event.stopPropagation()">
+                    <span class="material-icons">event</span> Holidays
+                </div>
+                <div class="menu-item" (click)="selectComponent('sports'); $event.stopPropagation()">
+                    <span class="material-icons">emoji_events</span> Sports
+                </div>
+                <div class="menu-item">
+                    <span class="material-icons">restaurant</span> Cuisine
+                </div>
+                <div class="menu-item">
+                    <span class="material-icons">translate</span> Language
+                </div>
+                <div class="menu-item">
+                    <span class="material-icons">attach_money</span> Currency
+                </div>
             </div>
-            <div class="menu-item" (click)="toggleDropdown('client')">
-                Client specifics <span class="arrow">></span>
-                <div class="dropdown" *ngIf="showDropdown === 'client'">
-                    <div class="dropdown-item">
-                        <span class="material-icons">assessment</span> KPI
-                    </div>
-                    <div class="dropdown-item">
-                        <span class="material-icons">menu_book</span> Glossary
-                    </div>
-                    <div class="dropdown-item">
-                        <span class="material-icons">verified_user</span> Thecnical Knowledge
-                    </div>
-                    <div class="dropdown-item">
-                        <span class="material-icons">people</span> Masimo Customers
-                    </div>
-                    <div class="dropdown-item" (click)="toggleKnowledgeCheckDropdown()">
-                        <span class="material-icons">phone</span> Knowledge Check <span class="arrow">></span>
-                        <div class="sub-dropdown" *ngIf="knowledgeCheckDropdownVisible">
-                            <div class="dropdown-item">
-                                <span class="material-icons">speed</span> Faster program
-                            </div>
-                            <div class="dropdown-item">
-                                <span class="material-icons">event_note</span> Anticipated topics
-                            </div>
+        </div>
+        <div class="menu-item" (click)="toggleDropdown('client')">
+            Client specifics <span class="arrow">></span>
+            <div class="dropdown" *ngIf="showDropdown === 'client'">
+                <div class="dropdown-item">
+                    <span class="material-icons">assessment</span> KPI
+                </div>
+                <div class="dropdown-item">
+                    <span class="material-icons">menu_book</span> Glossary
+                </div>
+                <div class="dropdown-item">
+                    <span class="material-icons">verified_user</span> Technical Knowledge
+                </div>
+                <div class="dropdown-item">
+                    <span class="material-icons">people</span> Masimo Customers
+                </div>
+                <div class="dropdown-item" (click)="toggleKnowledgeCheckDropdown()">
+                    <span class="material-icons">phone</span> Knowledge Check <span class="arrow">></span>
+                    <div class="sub-dropdown" *ngIf="knowledgeCheckDropdownVisible">
+                        <div class="dropdown-item">
+                            <span class="material-icons">speed</span> Faster program
+                        </div>
+                        <div class="dropdown-item">
+                            <span class="material-icons">event_note</span> Anticipated topics
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="menu-item" (click)="toggleDropdown('industry')">
-    Industry specifics <span class="arrow">></span>
-    <div class="dropdown" *ngIf="showDropdown === 'industry'">
-        <div class="dropdown-item">
-            <span class="material-icons">storage</span> Systems
         </div>
-        <div class="dropdown-item">
-            <span class="material-icons">menu_book</span> Retention Glossary
-        </div>
-        <div class="dropdown-item">
-            <span class="material-icons">list_alt</span> Steps of retention
-        </div>
-    </div>
+        <div class="menu-item" (click)="toggleDropdown('industry')">
+            Industry specifics <span class="arrow">></span>
+            <div class="dropdown" *ngIf="showDropdown === 'industry'">
+                <div class="dropdown-item">
+                    <span class="material-icons">storage</span> Systems
+                </div>
+                <div class="dropdown-item">
+                    <span class="material-icons">menu_book</span> Retention Glossary
+                </div>
+                <div class="dropdown-item">
+                    <span class="material-icons">list_alt</span> Steps of retention
+                </div>
             </div>
         </div>
+    </div>
 </div>

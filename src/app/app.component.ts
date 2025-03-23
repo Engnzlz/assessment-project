@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { SidebarMenuComponent } from './componets/smart-componet/sidebar-menu/sidebar-menu.component'; 
 import { GeographyCardComponent } from './modules/geography-card/geography-card.component';
 import { HolidaysComponent } from "./modules/holidays/holidays.component";
+import { SportsComponent } from "./modules/sports/sports.component";
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -10,12 +12,16 @@ import { HolidaysComponent } from "./modules/holidays/holidays.component";
     SidebarMenuComponent,
     CommonModule,
     GeographyCardComponent, 
-    HolidaysComponent
+    HolidaysComponent,
+    SportsComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  showGeography: boolean = false;
-  showHolidays: boolean = false;
+  selectedComponent: string | null = null;
+
+  handleComponentSelection(componentName: string) {
+      this.selectedComponent = componentName;
+  }
 }

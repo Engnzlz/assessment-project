@@ -6,11 +6,10 @@ import { CommonModule } from '@angular/common';
     standalone: true,
     imports: [CommonModule],
     templateUrl: './sidebar-menu.component.html',
-    styleUrl: './sidebar-menu.component.scss'
+    styleUrls: ['./sidebar-menu.component.scss']
 })
 export class SidebarMenuComponent {
-    @Output() showGeography = new EventEmitter<boolean>();
-    @Output() showHolidays = new EventEmitter<boolean>();
+    @Output() componentSelected = new EventEmitter<string>();
 
     showDropdown: string | null = null;
     knowledgeCheckDropdownVisible: boolean = false;
@@ -27,11 +26,7 @@ export class SidebarMenuComponent {
         this.knowledgeCheckDropdownVisible = !this.knowledgeCheckDropdownVisible;
     }
 
-    showGeographyCard() {
-      this.showGeography.emit(true);
-    }
-
-    showHolidaysCard() {
-      this.showHolidays.emit(true);
+    selectComponent(componentName: string) {
+        this.componentSelected.emit(componentName);
     }
 }
