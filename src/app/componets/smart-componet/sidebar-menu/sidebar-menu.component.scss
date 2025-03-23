@@ -75,13 +75,18 @@
         position: relative;
 
         .dropdown {
-            width: 100%; // Ancho igual al menu-item
-            background-color: #333; // Color de fondo gris oscuro
-            border-top: 1px solid #555;
+            position: absolute;
+            top: 100%; // Posicionar el dropdown debajo del elemento padre
+            left: 0; // Alinear el dropdown al inicio del elemento padre
+            width: 100%; // Asegurar que el dropdown ocupa el ancho completo del elemento padre
+            background-color: #F5F5F5; // O cualquier color de fondo deseado
+            display: flex;
+            flex-direction: column; // Alinear los elementos del dropdown en columna
+            z-index: 10; 
 
             .dropdown-item {
                 padding: 10px 15px;
-                color: #F9F7F1; // Ajusta el color del texto
+                color: #F5F5F5; // Ajusta el color del texto
                 display: flex; // Usar flexbox para alinear
                 align-items: center; // Alinear verticalmente
 
