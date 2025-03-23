@@ -18,15 +18,71 @@
             </div>
         </div>
     </div>
-    <div class="menu-items">
-        <div class="menu-item">
-            Culture specifics <span class="arrow">></span>
+        <div class="menu-items">
+            <div class="menu-item" (click)="toggleDropdown('culture')">
+                Culture specifics <span class="arrow">></span>
+                <div class="dropdown" *ngIf="showDropdown === 'culture'">
+                    <div class="menu-item" (click)="showGeographyCard(); $event.stopPropagation()">
+                        <span class="material-icons">public</span> Geography
+                    </div>
+                    <div class="dropdown-item">
+                        <span class="material-icons">event</span> Holidays
+                    </div>
+                    <div class="dropdown-item">
+                        <span class="material-icons">emoji_events</span> Sports
+                    </div>
+                    <div class="dropdown-item">
+                        <span class="material-icons">restaurant</span> Cuisine
+                    </div>
+                    <div class="dropdown-item">
+                        <span class="material-icons">translate</span> Language
+                    </div>
+                    <div class="dropdown-item">
+                        <span class="material-icons">attach_money</span> Currency
+                    </div>
+                    </div>
+            </div>
+            <div class="menu-item" (click)="toggleDropdown('client')">
+                Client specifics <span class="arrow">></span>
+                <div class="dropdown" *ngIf="showDropdown === 'client'">
+                    <div class="dropdown-item">
+                        <span class="material-icons">assessment</span> KPI
+                    </div>
+                    <div class="dropdown-item">
+                        <span class="material-icons">menu_book</span> Glossary
+                    </div>
+                    <div class="dropdown-item">
+                        <span class="material-icons">verified_user</span> Thecnical Knowledge
+                    </div>
+                    <div class="dropdown-item">
+                        <span class="material-icons">people</span> Masimo Customers
+                    </div>
+                    <div class="dropdown-item" (click)="toggleKnowledgeCheckDropdown()">
+                        <span class="material-icons">phone</span> Knowledge Check <span class="arrow">></span>
+                        <div class="sub-dropdown" *ngIf="knowledgeCheckDropdownVisible">
+                            <div class="dropdown-item">
+                                <span class="material-icons">speed</span> Faster program
+                            </div>
+                            <div class="dropdown-item">
+                                <span class="material-icons">event_note</span> Anticipated topics
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item" (click)="toggleDropdown('industry')">
+    Industry specifics <span class="arrow">></span>
+    <div class="dropdown" *ngIf="showDropdown === 'industry'">
+        <div class="dropdown-item">
+            <span class="material-icons">storage</span> Systems
         </div>
-        <div class="menu-item">
-            Client specifics <span class="arrow">></span>
+        <div class="dropdown-item">
+            <span class="material-icons">menu_book</span> Retention Glossary
         </div>
-        <div class="menu-item">
-            Industry specifics <span class="arrow">></span>
+        <div class="dropdown-item">
+            <span class="material-icons">list_alt</span> Steps of retention
         </div>
     </div>
+            </div>
+        </div>
 </div>

@@ -1,0 +1,16 @@
+<div class="geography-card">
+    <div class="map-container">
+        <img [src]="selectedRegionData.overlayImage" alt="Región Seleccionada" class="overlay">
+    </div>
+
+    <div class="menu">
+        <button *ngFor="let region of regionData" (click)="selectRegion(region.name)" [ngClass]="{'active': selectedRegion === region.name}">{{ region.name }}</button>
+    </div>
+
+    <div class="region-info">
+        <h2 class="subtitle">{{ selectedRegionData.name }} time</h2>
+        <div class="infImg"><p>{{ selectedRegionData.info }}</p>
+        <img [src]="selectedRegionData.image" alt="Imagen de la Región">
+        </div>
+    </div>
+</div>

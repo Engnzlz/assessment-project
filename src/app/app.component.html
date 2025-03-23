@@ -1,1 +1,6 @@
-<app-sidebar-menu />
+<div class="app-container">
+  <app-sidebar-menu (showGeography)="showGeography = $event"></app-sidebar-menu>
+  <div class="content">
+      <app-geography-card *ngIf="showGeography"></app-geography-card>
+  </div>
+</div>

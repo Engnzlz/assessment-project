@@ -1,0 +1,17 @@
+.app-container {
+    display: flex; /* Usamos flexbox para el diseño de columnas */
+    height: 100vh; /* Aseguramos que el contenedor ocupe toda la altura de la ventana */
+}
+
+app-side-bar-menu {
+    width: 200px; /* Ajusta el ancho del sidebar-menu según tus necesidades */
+    background-color: #f0f0f0; /* Agrega un color de fondo para distinguirlo */
+}
+
+.content {
+    flex: 1; /* El contenido ocupa el espacio restante */
+    padding: 20px; /* Agrega un poco de espacio alrededor del contenido */
+    display: flex; /* Usamos flexbox para centrar el contenido */
+    justify-content: center; /* Centramos horizontalmente */
+    align-items: center; /* Centramos verticalmente */
+}
