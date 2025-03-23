@@ -6,6 +6,7 @@ import { GeographyCardComponent } from './modules/geography-card/geography-card.
 import { HolidaysComponent } from "./modules/holidays/holidays.component";
 import { SportsComponent } from "./modules/sports/sports.component";
 import { CuisineComponent } from './modules/cuisine/cuisine.component';
+import { LanguageComponent } from './modules/language/language.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -15,7 +16,8 @@ import { CuisineComponent } from './modules/cuisine/cuisine.component';
     GeographyCardComponent, 
     HolidaysComponent,
     SportsComponent,
-    CuisineComponent
+    CuisineComponent,
+    LanguageComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
