@@ -1,4 +1,13 @@
 <div class="retention-glossary-container">
-    <h1>Glosario de Retención</h1>
-    <p>Aquí encontrarás información sobre el glosario de retención.</p>
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar término..." [(ngModel)]="searchTerm" (input)="filterTerms()">
+    </div>
+    <ul class="term-list">
+        <li *ngFor="let term of filteredTerms" (click)="showDefinition(term)">
+            {{ term.term }}
+            <div class="definition" *ngIf="selectedTerm === term">
+                {{ term.definition }}
+            </div>
+        </li>
+    </ul>
 </div>
