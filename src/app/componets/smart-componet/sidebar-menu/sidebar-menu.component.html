@@ -23,6 +23,7 @@
         <div class="menu-item" (click)="toggleDropdown('culture')">
             Culture specifics <span class="arrow">></span>
             <div class="dropdown" *ngIf="showDropdown === 'culture'">
+
                 <div class="menu-item" (click)="selectComponent('geography'); $event.stopPropagation()">
                     <span class="material-icons">public</span> Geography
                 </div>
@@ -43,47 +44,55 @@
                 </div>
             </div>
         </div>
+
         <div class="menu-item" (click)="toggleDropdown('client')">
             Client specifics <span class="arrow">></span>
             <div class="dropdown" *ngIf="showDropdown === 'client'">
-                <div class="dropdown-item">
+
+                <div class="menu-item" (click)="selectComponent('kpi'); $event.stopPropagation()">
                     <span class="material-icons">assessment</span> KPI
                 </div>
-                <div class="dropdown-item">
+                <div class="menu-item" (click)="selectComponent('glossary'); $event.stopPropagation()">
                     <span class="material-icons">menu_book</span> Glossary
                 </div>
-                <div class="dropdown-item">
+                <div class="menu-item" (click)="selectComponent('technical-knowledge'); $event.stopPropagation()">
                     <span class="material-icons">verified_user</span> Technical Knowledge
                 </div>
-                <div class="dropdown-item">
+                <div class="menu-item" (click)="selectComponent('customers'); $event.stopPropagation()">
                     <span class="material-icons">people</span> Masimo Customers
                 </div>
-                <div class="dropdown-item" (click)="toggleKnowledgeCheckDropdown()">
+
+                <!-- <div class="dropdown-item" (click)="toggleDropdown('knowledgeCheckDropdownVisible')">
                     <span class="material-icons">phone</span> Knowledge Check <span class="arrow">></span>
-                    <div class="sub-dropdown" *ngIf="knowledgeCheckDropdownVisible">
+                    <div class="dropdown" *ngIf="knowledgeCheckDropdownVisible">
+
                         <div class="dropdown-item">
                             <span class="material-icons">speed</span> Faster program
                         </div>
                         <div class="dropdown-item">
                             <span class="material-icons">event_note</span> Anticipated topics
                         </div>
+
                     </div>
-                </div>
+                </div> -->
+
             </div>
         </div>
+
         <div class="menu-item" (click)="toggleDropdown('industry')">
             Industry specifics <span class="arrow">></span>
             <div class="dropdown" *ngIf="showDropdown === 'industry'">
-                <div class="dropdown-item">
+                <div class="menu-item" (click)="selectComponent('systems'); $event.stopPropagation()">
                     <span class="material-icons">storage</span> Systems
                 </div>
-                <div class="dropdown-item">
+                <div class="menu-item" (click)="selectComponent('retention-glossary'); $event.stopPropagation()">
                     <span class="material-icons">menu_book</span> Retention Glossary
                 </div>
-                <div class="dropdown-item">
+                <div class="menu-item" (click)="selectComponent('steps-of-retention'); $event.stopPropagation()">
                     <span class="material-icons">list_alt</span> Steps of retention
                 </div>
             </div>
         </div>
+        
     </div>
 </div>
