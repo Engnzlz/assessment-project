@@ -5,6 +5,7 @@ import { SidebarMenuComponent } from './componets/smart-componet/sidebar-menu/si
 import { GeographyCardComponent } from './modules/geography-card/geography-card.component';
 import { HolidaysComponent } from "./modules/holidays/holidays.component";
 import { SportsComponent } from "./modules/sports/sports.component";
+import { CuisineComponent } from './modules/cuisine/cuisine.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -13,7 +14,8 @@ import { SportsComponent } from "./modules/sports/sports.component";
     CommonModule,
     GeographyCardComponent, 
     HolidaysComponent,
-    SportsComponent
+    SportsComponent,
+    CuisineComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
