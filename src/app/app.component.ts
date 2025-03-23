@@ -7,6 +7,7 @@ import { HolidaysComponent } from "./modules/holidays/holidays.component";
 import { SportsComponent } from "./modules/sports/sports.component";
 import { CuisineComponent } from './modules/cuisine/cuisine.component';
 import { LanguageComponent } from './modules/language/language.component';
+import { CurrencyComponent } from './modules/currency/currency.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -17,7 +18,8 @@ import { LanguageComponent } from './modules/language/language.component';
     HolidaysComponent,
     SportsComponent,
     CuisineComponent,
-    LanguageComponent
+    LanguageComponent,
+    CurrencyComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
