@@ -1,6 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 import { SidebarMenuComponent } from './componets/smart-componet/sidebar-menu/sidebar-menu.component'; 
 import { GeographyCardComponent } from './modules/geography-card/geography-card.component';
 import { HolidaysComponent } from "./modules/holidays/holidays.component";
@@ -15,10 +23,12 @@ import { CustomersComponent } from './modules/customers/customers.component';
 import { SystemsComponent } from './modules/systems/systems.component';
 import { RetentionGlossaryComponent } from './modules/retention-glossary/retention-glossary.component';
 import { StepsOfRetentionComponent } from './modules/steps-of-retention/steps-of-retention.component';
+import { HomeComponent } from './modules/home/home.component';
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    HomeComponent,
     SidebarMenuComponent,
     CommonModule,
     GeographyCardComponent, 
@@ -33,7 +43,15 @@ import { StepsOfRetentionComponent } from './modules/steps-of-retention/steps-of
     CustomersComponent,
     SystemsComponent,
     RetentionGlossaryComponent,
-    StepsOfRetentionComponent 
+    StepsOfRetentionComponent,
+
+    MatCardModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatListModule,
+    MatToolbarModule,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']

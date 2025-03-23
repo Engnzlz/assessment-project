@@ -1,4 +1,17 @@
-<div class="sports-card">
-    <h1>Sports</h1>
-    <p>Here you can find all the information about sports</p>
-</div>
+    <div class="sports-container">
+    <div class="image-list">
+        <div *ngFor="let person of sportsPeople; let i = index" class="person-image" (click)="selectPerson(person)">
+        <img [src]="person.image" alt="{{ person.name }}">
+        <!-- <div class="sport-tag">{{ person.sport }}</div> -->
+        </div>
+    </div>
+    <div class="person-details" *ngIf="selectedPerson">
+        <div class="person-card">
+        <img [src]="selectedPerson.image" alt="{{ selectedPerson.name }}" class="person-card-image">
+        <div class="person-info">
+            <h3>{{ selectedPerson.name }}</h3>
+            <p>{{ selectedPerson.description }}</p>
+        </div>
+        </div>
+    </div>
+    </div>

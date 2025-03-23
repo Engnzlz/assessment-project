@@ -1,6 +1,72 @@
-.holidays-container {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
+    .holidays-container {
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 1rem;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .holiday-card {
+    display: flex;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 40vh;
+    }
+
+    .holiday-image {
+    flex: 1;
+    background-image: url('https://i0.wp.com/anchor.hope.edu/wp-content/uploads/2019/11/christmas-1.png?fit=647%2C377&ssl=1');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:50vh;
+    }
+
+    .day-number {
+    font-size: 5rem;
+    color: white;
+    }
+
+    .calendar-container {
+    flex: 1;
+    padding: 1rem;
+    }
+
+    .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    }
+
+    .calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    }
+
+    button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    }
+
+    button.active {
+    background-color: #3f51b5;
+    color: white;
+    border-radius: 4px;
+    }
+
+    .day-selector {
+    display: flex;
+    justify-content: space-between;
+    }
+
+    .progress-bar {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    }

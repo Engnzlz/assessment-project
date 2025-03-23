@@ -1,6 +1,7 @@
 <div class="app-container">
     <app-sidebar-menu (componentSelected)="handleComponentSelection($event)"></app-sidebar-menu>
     <div class="content">
+        <app-home *ngIf="!selectedComponent"></app-home>
         <app-geography-card *ngIf="selectedComponent === 'geography'"></app-geography-card>
         <app-holidays *ngIf="selectedComponent === 'holidays'"></app-holidays>
         <app-sports *ngIf="selectedComponent === 'sports'"></app-sports>

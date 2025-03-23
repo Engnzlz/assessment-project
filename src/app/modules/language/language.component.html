@@ -1,4 +1,39 @@
-<div class="language-container">
-    <h1>Idioma (Language)</h1>
-    <p>Aquí encontrarás información sobre el idioma.</p>
-</div>
+    <div class="language-container">
+        <h2>Activity 2</h2>
+        <p>Select the correct option from the following basic tech knowledge:</p>
+    
+        <div class="exercise-section">
+        <div class="sentence">
+            <span class="sentence-number">1/2</span>
+            The <span class="blank" #blank1>_________</span> is a box that provides a Wi-Fi router functions in one device, managing communication between the local network and the Internet Service Provider, with Ethernet ports for wired connections and a local <span class="blank" #blank2>_________</span> network. It enables wireless internet connectivity for devices like computers and organizers, while a <span class="blank" #blank3>_________</span> forwards data packets between networks.
+        </div>
+    
+        <div class="options">
+            <button *ngFor="let option of options1" (click)="selectOption(option)">
+            {{ option }}
+            </button>
+        </div>
+        </div>
+    
+        <div class="exercise-section">
+        <div class="sentence">
+            <span class="sentence-number">2/2</span>
+            <span class="blank" #blank4>_________</span> technology utilizes radio signals to connect devices like computers and cell phones without wires. Meanwhile, <span class="blank" #blank5>_________</span> are thin glass strands used in technology to transmit data faster than <span class="blank" #blank6>_________</span>, while it consist of conductive material surrounded by insulation, transmitting power and data in electrical appliances.
+        </div>
+        <div class="options">
+            <button *ngFor="let option of options2" (click)="selectOption(option)">
+            {{ option }}
+            </button>
+        </div>
+        </div>
+    
+        <button (click)="resetExercise()">Reset</button>
+    
+        <div *ngIf="showSuccess" class="success-message">
+        ¡Ejercicio completado correctamente!
+        </div>
+    
+        <div *ngIf="showError" class="error-message">
+        Por favor, completa todas las opciones.
+        </div>
+    </div>
