@@ -1,39 +1,64 @@
-    <div class="language-container">
-        <h2>Activity</h2>
-        <p>Select the correct option from the following basic tech knowledge:</p>
-    
-        <div class="exercise-section">
+<div class="language-container">
+    <h2>Activity</h2>
+  
+    <div class="exercise-1">
+      <h3>Ejercicio 1: Completar los espacios en blanco</h3>
+      <p>Select the correct option from the following basic tech knowledge:</p>
+  
+      <div class="exercise-section">
         <div class="sentence">
-            <span class="sentence-number">1/2</span>
-            The <span class="blank" #blank1>_________</span> is a box that provides a Wi-Fi router functions in one device, managing communication between the local network and the Internet Service Provider, with Ethernet ports for wired connections and a local <span class="blank" #blank2>_________</span> network. It enables wireless internet connectivity for devices like computers and organizers, while a <span class="blank" #blank3>_________</span> forwards data packets between networks.
+          <span class="sentence-number">1/2</span>
+          The <span class="blank" #blank1>_________</span> is a box that provides a Wi-Fi router functions in one device, managing communication between the local network and the Internet Service Provider, with Ethernet ports for wired connections and a local <span class="blank" #blank2>_________</span> network. It enables wireless internet connectivity for devices like computers and organizers, while a <span class="blank" #blank3>_________</span> forwards data packets between networks.
         </div>
-    
+  
         <div class="options">
-            <button *ngFor="let option of options1" (click)="selectOption(option)">
+          <button *ngFor="let option of options1" (click)="selectOption(option)">
             {{ option }}
-            </button>
+          </button>
         </div>
-        </div>
-    
-        <div class="exercise-section">
+      </div>
+  
+      <div class="exercise-section">
         <div class="sentence">
-            <span class="sentence-number">2/2</span>
-            <span class="blank" #blank4>_________</span> technology utilizes radio signals to connect devices like computers and cell phones without wires. Meanwhile, <span class="blank" #blank5>_________</span> are thin glass strands used in technology to transmit data faster than <span class="blank" #blank6>_________</span>, while it consist of conductive material surrounded by insulation, transmitting power and data in electrical appliances.
+          <span class="sentence-number">2/2</span>
+          <span class="blank" #blank4>_________</span> technology utilizes radio signals to connect devices like computers and cell phones without wires. Meanwhile, <span class="blank" #blank5>_________</span> are thin glass strands used in technology to transmit data faster than <span class="blank" #blank6>_________</span>, while it consist of conductive material surrounded by insulation, transmitting power and data in electrical appliances.
         </div>
         <div class="options">
-            <button *ngFor="let option of options2" (click)="selectOption(option)">
+          <button *ngFor="let option of options2" (click)="selectOption(option)">
             {{ option }}
-            </button>
+          </button>
         </div>
-        </div>
-    
-        <button (click)="resetExercise()">Reset</button>
-    
-        <div *ngIf="showSuccess" class="success-message">
+      </div>
+  
+      <button (click)="resetExercise()">Reset</button>
+  
+      <div *ngIf="showExercise1Success" class="success-message">
         ¡Ejercicio completado correctamente!
-        </div>
-    
-        <div *ngIf="showError" class="error-message">
+      </div>
+  
+      <div *ngIf="showExercise1Error" class="error-message">
         Por favor, completa todas las opciones.
-        </div>
+      </div>
     </div>
+  
+    <div class="exercise-2" *ngIf="showExercise2">
+      <h3>Ejercicio 2: Ordenar las oraciones</h3>
+      <p>Order the sentences in the correct sequence:</p>
+  
+      <div cdkDropList class="sentence-list" (cdkDropListDropped)="dropSentences($event)">
+        <div cdkDrag class="sentence-item" *ngFor="let sentence of dragAndDropSentences">
+          {{ sentence.content }}
+        </div>
+      </div>
+  
+      <button (click)="checkSentencesOrder()">Check Order</button>
+  
+      <div *ngIf="showSentencesSuccess" class="success-message">
+        ¡Orden correcto!
+      </div>
+  
+      <div *ngIf="showSentencesError" class="error-message">
+        ¡Orden incorrecto!
+      </div>
+    </div>
+  </div>
