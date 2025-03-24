@@ -1,59 +1,86 @@
-# AssessmentProject
+# Proyecto Assessment - BPO Training Platform
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
+Este proyecto Angular fue desarrollado como parte de un assessment para el equipo de capacitación en una empresa BPO. El objetivo fue implementar diseños proporcionados en un archivo Figma, creando una aplicación funcional y responsiva.
 
-## Development server
+## Descripción del Proyecto
 
-To start a local development server, run:
+El proyecto consiste en una plataforma que mejora el desempeño de los agentes dentro de sus respectivas campañas. Incluye varios componentes y módulos que representan diferentes funcionalidades y secciones de la aplicación, como glosarios interactivos, herramientas de drag and drop, y otros elementos visuales y de interacción.
 
-```bash
-ng serve
-```
+## Estructura del Proyecto
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+* **`src/app`**: Contiene el código fuente de la aplicación, incluyendo componentes y módulos.
+    * **`components`**: Componentes reutilizables, como `drag-and-drop` y `sidebar-menu`.
+    * **`modules`**: Módulos de la aplicación, incluyendo:
+        * `cuisine`
+        * `currency`
+        * `customers`
+        * `geography-card`
+        * `glossary`
+        * `holidays`
+        * `home`
+        * `kpi`
+        * `language`
+        * `retention-glossary`
+        * `sports`
+        * `steps-of-retention`
+        * `systems`
+        * `technical-knowledge`
+    * `app.component.*`: Archivos del componente principal de la aplicación.
+    * `app.config.*`: Archivos de configuración de la aplicación.
+* **`assets`**: Contiene los recursos estáticos de la aplicación (imágenes, logos).
+* **`README.md`**: Este archivo, con la descripción del proyecto e instrucciones de ejecución.
 
-## Code scaffolding
+## Tecnologías Utilizadas
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+* Angular (versión 17).
+* HTML, CSS, SCSS.
+* TypeScript.
+* Angular CLI.
+* CDK Drag and Drop (para componentes interactivos).
 
-```bash
-ng generate component component-name
-```
+## Instrucciones de Ejecución
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+1.  **Clonar el Repositorio:**
+    ```bash
+    git clone [https://github.com/Engnzlz/assessment-project.git](https://github.com/Engnzlz/assessment-project.git)
+    ```
+2.  **Instalar Dependencias:**
+    ```bash
+    npm install
+    ```
+3.  **Ejecutar la Aplicación:**
+    ```bash
+    ng serve
+    ```
+4.  **Navegar a la Aplicación:**
+    Abre tu navegador y navega a `http://localhost:4200/`.
 
-```bash
-ng generate --help
-```
+## Componentes Destacados
 
-## Building
+* **`glossary`**: Muestra un glosario interactivo con filtrado alfabético.
+* **`drag-and-drop`**: Permite la interacción de arrastrar y soltar para ordenar elementos.
+* **`language`**: Componente con ejercicios interactivos, incluyendo completar espacios en blanco.
+* **`sidebar-menu`**: Menu lateral, con las diferentes secciones
 
-To build the project run:
+## Consideraciones
 
-```bash
-ng build
-```
+* El diseño de los componentes fue implementado siguiendo las especificaciones proporcionadas en el archivo Figma.
+* Se prestó especial atención a la responsividad de los componentes para asegurar una experiencia de usuario óptima en diferentes dispositivos.
+* Las imágenes utilizadas en los componentes se encuentran en el directorio `assets`.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Posibles Mejoras
 
-## Running unit tests
+* Implementar una API para obtener datos dinámicamente.
+* Añadir pruebas unitarias y de integración para asegurar la calidad del código.
+* Mejorar la usabilidad y la accesibilidad de la aplicación.
+* Optimizar el rendimiento de la aplicación. 
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Enlaces
 
-```bash
-ng test
-```
+* **Archivo Figma:** [https://www.figma.com/design/BKLdrHgaKES93KDEWKY5Qf/CIP?node-id=1656-46733&m=dev&t=Q7DfW025IpktO4ax-1]
+* **Figma Downloads:** [https://www.figma.com/downloads/](https://www.figma.com/downloads/)
+* **Noto Sans - Google Fonts:** [https://fonts.google.com/specimen/Noto+Sans](https://fonts.google.com/specimen/Noto+Sans)
 
-## Running end-to-end tests
+## Contacto
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Si tienes alguna pregunta o necesitas información adicional, no dudes en contactarme.
