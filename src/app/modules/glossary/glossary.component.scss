@@ -1,65 +1,93 @@
-    .glossary-container {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 1rem;
-        font-family: Arial, sans-serif;
-        align-items: center;
-            }
-            .scenario {
-                display: flex;
-                background-color: #f9f9f9;
-                border-radius: 8px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                justify-content: center;
-                align-items: stretch;
-            }
+.glossary-container {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
     
-    .image-container {
-        overflow: hidden;
-    }
-    
-    .image-container img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-    
-    .scenario-content {
-        flex: 1;
-        padding: 1.5rem;
-        flex-direction: column;
-    }
-    
-    .scenario-header {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 1rem;
-    }
-    
-    .scenario-number {
-        font-size: 1.2rem;
+    h1{
+        font-size: 2rem;
         font-weight: bold;
-        color: #DF5B17
+        color: #E3A134;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
     }
-    
-    .terms {
-        font-size: 1rem;
-        color: #666;
-    }
-    
-    .conversation {
-        p {
-        margin-bottom: 1rem;
-        }
-    
-        .customer {
-        font-weight: bold;
-        color: #007bff;
-        }
-    
-        .representative {
-        font-weight: bold;
-        color: #28a745;
-        }
-    }
+}
+
+.alphabet-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+button.active {
+    background-color: #DF5B17;
+    color: white;
+}
+
+button.has-definition {
+    font-weight: bold;
+    color: #E3A134;
+}
+
+.glossary-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center; 
+}
+
+.glossary-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: #333;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    margin-top: 1rem;
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+}
+.item-alphabet {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.item-letter {
+    padding: 0.2rem 0.4rem;
+    margin: 0.1rem;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    cursor: default;
+    font-size: 0.8rem;
+}
+
+img {
+    max-width: 100%;
+    margin-top: 0.5rem;
+}
