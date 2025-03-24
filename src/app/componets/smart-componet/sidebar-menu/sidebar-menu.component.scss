@@ -1,105 +1,127 @@
-    .side-bar-menu {
-        width: 320px;
-        background-color: #21305B;
-        height: 100vh;
-        padding: 20px;
-        color: white;
-        font-family: sans-serif; 
-        .logo {
-        display: flex;
-        justify-content: center;
-        padding: 10px;
-        img {
-            width: 100vh;
-        }
-        }
-        .user-profile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    
-        .avatar-container {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-            img {
-            width: 70%;
-            border-radius: 30%;
-            margin-bottom: 10px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            }
-            .expert-label {
-                background-color: #FFFFFF;
-                border-radius: 20px;
-                padding: 10px 20px;
-                font-weight: bold;
-                text-align: center;
-                position: relative;
-                margin-bottom: 10px;
-                margin-top: -70px;
-                color: #21305B;
-            }
-            .plus-buttons {
-                display: flex;
-                justify-content: space-around;
-                width: 100%;
-                margin-bottom: 10px;
-        
-                button {
-                background-color: transparent;
-                border: 2px solid white;
-                color: white;
-                border-radius: 50%;
-                padding: 5px 10px;
-                }
-        }
-            .award-text {
-                text-align: justify;
-                font-size: 14px;
-                margin-bottom: 20px;
-            }
-        }
-    
+.side-bar-menu {
+  width: 320px;
+  background-color: #21305b;
+  height: 100vh;
+  padding: 20px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
 
-        }
-    .menu-item {
-        background-color: #333333; // Color de fondo gris oscuro
-        color: #F9F7F1; // Color de texto blanco
-        padding: 10px 15px; // Ajusta el padding
-        border-bottom: 1px solid #555; // Borde inferior
-        display: flex; // Usar flexbox
-        align-items: center; // Alinear verticalmente
-        justify-content: space-between; // Espaciar elementos
+  .logo {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+    img {
+      width: 100vh;
+    }
+  }
+
+  .user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .avatar-container {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+
+      img {
+        width: 70%;
+        border-radius: 30%;
+        margin: 0 auto 10px;
+        display: block;
+      }
+
+      .expert-label {
+        background-color: #ffffff;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-weight: bold;
+        text-align: center;
         position: relative;
+        margin: -70px auto 10px;
+        color: #21305b;
+        font-size: 12px;
+      }
 
-        .dropdown {
-            position: absolute;
-            top: 100%; // Posicionar el dropdown debajo del elemento padre
-            left: 0; // Alinear el dropdown al inicio del elemento padre
-            width: 100%; // Asegurar que el dropdown ocupa el ancho completo del elemento padre
-            background-color: #F5F5F5; // O cualquier color de fondo deseado
-            display: flex;
-            flex-direction: column; // Alinear los elementos del dropdown en columna
-            z-index: 10; 
+      .plus-buttons {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 10px;
 
-            .dropdown-item {
-                padding: 10px 15px;
-                color: #333333; // Ajusta el color del texto
-                display: flex; // Usar flexbox para alinear
-                align-items: center; // Alinear verticalmente
-
-                .material-icons {
-                    margin-right: 10px; // Espacio entre el icono y el texto
-                    font-size: 20px; // Ajusta el tamaño del icono
-                }
-            }
+        button {
+          background-color: transparent;
+          border: 2px solid white;
+          color: white;
+          border-radius: 50%;
+          padding: 5px 10px;
         }
+      }
 
-        &.active {
-            background-color: #000;
+      .award-text {
+        text-align: justify;
+        font-size: 12px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .menu-item {
+    background-color: #333333;
+    color: #f9f7f1;
+    padding: 10px 15px;
+    border-bottom: 1px solid #555;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    font-size: 12px;
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      z-index: 10;
+
+      .dropdown-item {
+        padding: 10px 15px;
+        color: #333333;
+        display: flex;
+        align-items: center;
+
+        .material-icons {
+          margin-right: 10px;
+          font-size: 20px;
         }
+      }
     }
-    
+
+    &.active {
+      background-color: #000;
     }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 10px;
+
+    .logo img {
+      width: 50vh;
+    }
+
+    .user-profile .avatar-container img {
+      width: 50%;
+    }
+
+    .menu-item {
+      padding: 8px 10px;
+    }
+  }
+}

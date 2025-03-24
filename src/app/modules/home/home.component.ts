@@ -16,5 +16,7 @@ import { MatToolbar } from '@angular/material/toolbar';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
+  userPoints: number = 0;
+  userProgress: number = 0;
+  recentAchievement: string = 'No recent achievements';
 }

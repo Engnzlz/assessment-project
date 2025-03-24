@@ -1,5 +1,24 @@
-<Div class="container">
-    <h1>Cultural Immersion Program Integration ​</h1>
-    <p>Earned points in this category​</p>
-    <img src="../../../assets/images/Bannerwelcome.png" alt="">
-</Div>
+<div class="container">
+    <h1>Cultural Immersion Program Integration ​</h1>
+    <p>Earned points in this category ​</p>
+    <img src="../../../assets/images/Bannerwelcome.png" alt="Welcome Banner">
+    
+    <div class="progress-section">
+    <h2>Your Progress</h2>
+    <div class="progress-bar">
+        <div class="progress-fill" [style.width.%]="userProgress"></div>
+    </div>
+    <p>Total Points: {{ userPoints }}</p>
+    <p>Recent Achievement: {{ recentAchievement }}</p>
+    </div>
+    
+    <div class="activities-section">
+    <h2>Upcoming Activities</h2>
+    <ul>
+        <li>Workshop: Cultural Traditions (Date)</li>
+        <li>Event: Global Food Festival (Date)</li>
+        <li>...</li>
+    </ul>
+    </div>
+    
+</div>

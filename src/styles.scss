@@ -1,46 +1,44 @@
 /* src/styles.scss */
 
-/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans', sans-serif; /* Usando la fuente Noto Sans */
 }
 
-/* Body Styles */
+html, body {
+    height: 100%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
 body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    height: 100%; 
-    margin: 0;
 }
 
-/* Color Variables */
-$color-primario: #21305B;
-$color-secundario: #DF5B17;
-$color-terciario: #E1B645;
-$color-terciario-oscuro: #E3A134;
+$color-primary: #21305B;
+$color-secondary: #DF5B17;
+$color-tertiary: #E1B645;
+$color-tertiary-dark: #E3A134;
 
-$color-texto-principal: #000000;
-$color-texto-secundario: #333333;
-$color-texto-gris: #55565B;
-$color-texto-claro: #F9F7F1;
-$color-texto-blanco: #FFFFFF;
+$text-primary: #000000;
+$text-secondary: #333333;
+$text-gray: #55565B;
+$text-light: #F9F7F1;
+$text-white: #FFFFFF;
 
-$color-fondo-claro: #F5F5F5;
-$color-fondo-gradacion: #C7EBDB;
-$color-fondo-flipcard: #EFC4CC;
+$bg-light: #F5F5F5;
+$bg-gradient: #C7EBDB;
+$bg-flipcard: #EFC4CC;
 
-$color-respuesta-positivo: #17C964;
-$color-respuesta-negativo: #F93543;
+$response-positive: #17C964;
+$response-negative: #F93543;
 
-/* Utility Classes */
 .container {
     width: 80%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 .text-center {
@@ -54,11 +52,10 @@ $color-respuesta-negativo: #F93543;
 .mb-2 { margin-bottom: 1rem; }
 .mb-3 { margin-bottom: 1.5rem; }
 
-/* Title Styles */
 .title {
     font-size: 2rem;
     font-weight: bold;
-    color: $color-texto-principal;
+    color: $text-primary;
     margin-bottom: 0.5rem;
     line-height: 1.2;
 }
@@ -66,7 +63,7 @@ $color-respuesta-negativo: #F93543;
 .subtitle {
     font-size: 1.5rem;
     font-weight: 600;
-    color: $color-terciario-oscuro;
+    color: $color-tertiary-dark;
     margin-bottom: 0.75rem;
     line-height: 1.3;
 }
@@ -74,18 +71,12 @@ $color-respuesta-negativo: #F93543;
 h3 {
     font-size: 1.25rem;
     font-weight: normal;
-    color: $color-texto-gris;
+    color: $text-gray;
     margin-bottom: 1rem;
     line-height: 1.4;
 }
 
-/* Material Icons */
 .material-icons {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #808080;
-}
-
-/* Estilos adicionales del body */
-html, body {
-    height: 100%;
 }

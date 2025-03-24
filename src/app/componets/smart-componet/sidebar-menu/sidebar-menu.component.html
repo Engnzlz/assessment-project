@@ -1,68 +1,98 @@
 <div class="side-bar-menu">
-    <div class="logo">
-        <img src="assets/logos/WhitelogoOptimum.png" alt="Optimum Logo">
+  <div class="logo">
+    <img src="assets/logos/WhitelogoOptimum.png" alt="Optimum Logo" />
+  </div>
+  <div class="user-profile">
+    <div class="avatar-container">
+      <img src="assets/images/avatar00.png" alt="Avatar" />
+      <div class="expert-label">Errorless Expert</div>
+      <div class="plus-buttons">
+        <button>+</button>
+        <button>+</button>
+        <button>+</button>
+        <button>+</button>
+        <button>+</button>
+        <button>+</button>
+      </div>
+      <div class="award-text">
+        Finish 5 activities without any error to earn this award.
+      </div>
     </div>
-    <div class="user-profile">
-        <div class="avatar-container">
-            <img src="assets/images/avatar00.png" alt="Avatar">
-            <div class="expert-label">Errorless Expert</div>
-            <div class="plus-buttons">
-                <button>+</button>
-                <button>+</button>
-                <button>+</button>
-                <button>+</button>
-                <button>+</button>
-                <button>+</button>
-            </div>
-            <div class="award-text">
-                Finish 5 activities without any error to earn this award.
-            </div>
+  </div>
+  <div class="menu-items">
+    <div class="menu-item" (click)="toggleDropdown('culture')">
+      Culture specifics <span class="arrow">></span>
+      <div class="dropdown" *ngIf="showDropdown === 'culture'">
+        <div
+          class="menu-item"
+          (click)="selectComponent('geography'); $event.stopPropagation()"
+        >
+          <span class="material-icons">public</span> Geography
         </div>
+        <div
+          class="menu-item"
+          (click)="selectComponent('holidays'); $event.stopPropagation()"
+        >
+          <span class="material-icons">event</span> Holidays
+        </div>
+        <div
+          class="menu-item"
+          (click)="selectComponent('sports'); $event.stopPropagation()"
+        >
+          <span class="material-icons">emoji_events</span> Sports
+        </div>
+        <div
+          class="menu-item"
+          (click)="selectComponent('cuisine'); $event.stopPropagation()"
+        >
+          <span class="material-icons">restaurant</span> Cuisine
+        </div>
+        <div
+          class="menu-item"
+          (click)="selectComponent('language'); $event.stopPropagation()"
+        >
+          <span class="material-icons">translate</span> Language
+        </div>
+        <div
+          class="menu-item"
+          (click)="selectComponent('currency'); $event.stopPropagation()"
+        >
+          <span class="material-icons">attach_money</span> Currency
+        </div>
+      </div>
     </div>
-    <div class="menu-items">
-        <div class="menu-item" (click)="toggleDropdown('culture')">
-            Culture specifics <span class="arrow">></span>
-            <div class="dropdown" *ngIf="showDropdown === 'culture'">
 
-                <div class="menu-item" (click)="selectComponent('geography'); $event.stopPropagation()">
-                    <span class="material-icons">public</span> Geography
-                </div>
-                <div class="menu-item" (click)="selectComponent('holidays'); $event.stopPropagation()">
-                    <span class="material-icons">event</span> Holidays
-                </div>
-                <div class="menu-item" (click)="selectComponent('sports'); $event.stopPropagation()">
-                    <span class="material-icons">emoji_events</span> Sports
-                </div>
-                <div class="menu-item" (click)="selectComponent('cuisine'); $event.stopPropagation()">
-                    <span class="material-icons">restaurant</span> Cuisine
-                </div>
-                <div class="menu-item" (click)="selectComponent('language'); $event.stopPropagation()">
-                    <span class="material-icons">translate</span> Language
-                </div>
-                <div class="menu-item" (click)="selectComponent('currency'); $event.stopPropagation()">
-                    <span class="material-icons">attach_money</span> Currency
-                </div>
-            </div>
+    <div class="menu-item" (click)="toggleDropdown('client')">
+      Client specifics <span class="arrow">></span>
+      <div class="dropdown" *ngIf="showDropdown === 'client'">
+        <div
+          class="menu-item"
+          (click)="selectComponent('kpi'); $event.stopPropagation()"
+        >
+          <span class="material-icons">assessment</span> KPI
+        </div>
+        <div
+          class="menu-item"
+          (click)="selectComponent('glossary'); $event.stopPropagation()"
+        >
+          <span class="material-icons">menu_book</span> Glossary
+        </div>
+        <div
+          class="menu-item"
+          (click)="
+            selectComponent('technical-knowledge'); $event.stopPropagation()
+          "
+        >
+          <span class="material-icons">verified_user</span> Technical Knowledge
+        </div>
+        <div
+          class="menu-item"
+          (click)="selectComponent('customers'); $event.stopPropagation()"
+        >
+          <span class="material-icons">people</span> Masimo Customers
         </div>
 
-        <div class="menu-item" (click)="toggleDropdown('client')">
-            Client specifics <span class="arrow">></span>
-            <div class="dropdown" *ngIf="showDropdown === 'client'">
-
-                <div class="menu-item" (click)="selectComponent('kpi'); $event.stopPropagation()">
-                    <span class="material-icons">assessment</span> KPI
-                </div>
-                <div class="menu-item" (click)="selectComponent('glossary'); $event.stopPropagation()">
-                    <span class="material-icons">menu_book</span> Glossary
-                </div>
-                <div class="menu-item" (click)="selectComponent('technical-knowledge'); $event.stopPropagation()">
-                    <span class="material-icons">verified_user</span> Technical Knowledge
-                </div>
-                <div class="menu-item" (click)="selectComponent('customers'); $event.stopPropagation()">
-                    <span class="material-icons">people</span> Masimo Customers
-                </div>
-
-                <!-- <div class="dropdown-item" (click)="toggleDropdown('knowledgeCheckDropdownVisible')">
+        <!-- <div class="dropdown-item" (click)="toggleDropdown('knowledgeCheckDropdownVisible')">
                     <span class="material-icons">phone</span> Knowledge Check <span class="arrow">></span>
                     <div class="dropdown" *ngIf="knowledgeCheckDropdownVisible">
 
@@ -75,24 +105,35 @@
 
                     </div>
                 </div> -->
-
-            </div>
-        </div>
-
-        <div class="menu-item" (click)="toggleDropdown('industry')">
-            Industry specifics <span class="arrow">></span>
-            <div class="dropdown" *ngIf="showDropdown === 'industry'">
-                <div class="menu-item" (click)="selectComponent('systems'); $event.stopPropagation()">
-                    <span class="material-icons">storage</span> Systems
-                </div>
-                <div class="menu-item" (click)="selectComponent('retention-glossary'); $event.stopPropagation()">
-                    <span class="material-icons">menu_book</span> Retention Glossary
-                </div>
-                <div class="menu-item" (click)="selectComponent('steps-of-retention'); $event.stopPropagation()">
-                    <span class="material-icons">list_alt</span> Steps of retention
-                </div>
-            </div>
-        </div>
-        
+      </div>
     </div>
+
+    <div class="menu-item" (click)="toggleDropdown('industry')">
+      Industry specifics <span class="arrow">></span>
+      <div class="dropdown" *ngIf="showDropdown === 'industry'">
+        <div
+          class="menu-item"
+          (click)="selectComponent('systems'); $event.stopPropagation()"
+        >
+          <span class="material-icons">storage</span> Systems
+        </div>
+        <div
+          class="menu-item"
+          (click)="
+            selectComponent('retention-glossary'); $event.stopPropagation()
+          "
+        >
+          <span class="material-icons">menu_book</span> Retention Glossary
+        </div>
+        <div
+          class="menu-item"
+          (click)="
+            selectComponent('steps-of-retention'); $event.stopPropagation()
+          "
+        >
+          <span class="material-icons">list_alt</span> Steps of retention
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
